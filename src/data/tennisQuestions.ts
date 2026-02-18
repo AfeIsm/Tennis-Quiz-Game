@@ -148,10 +148,10 @@ export const tennisQuestions: Question[] = [
     id: "t-m-5",
     sport: "Tennis",
     difficulty: "MEDIUM",
-    prompt: "How many games do you usually need to win a set (without a tiebreak detail)?",
+    prompt: "How many games do you usually need to win a set (without a tiebreak)?",
     choices: [
       { id: "a", text: "4" },
-      { id: "b", text: "6 (and generally by 2)" },
+      { id: "b", text: "6" },
       { id: "c", text: "8" },
       { id: "d", text: "10" },
     ],
@@ -220,7 +220,7 @@ export const tennisQuestions: Question[] = [
     id: "t-h-4",
     sport: "Tennis",
     difficulty: "HARD",
-    prompt: "In doubles, what counts as “in” on a serve?",
+    prompt: "In doubles, what counts as “in” during the point (excluding serve)?",
     choices: [
       { id: "a", text: "Singles sidelines" },
       { id: "b", text: "Doubles sidelines (wider court)" },
