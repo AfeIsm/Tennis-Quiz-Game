@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# 🏃‍♂️🎾 Rule Runner – Adaptive Tennis Rules Quiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A 10-question interactive tennis rules quiz designed to teach kids the fundamentals of tennis in a fun, adaptive way.
 
-Currently, two official plugins are available:
+Built as part of a Software Engineering Internship assessment for a sports education game company.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Live Demo:**  
+👉 [View Deployed App](PASTE_YOUR_VERCEL_LINK_HERE)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Overview
 
-## Expanding the ESLint configuration
+**Rule Runner** is a web-based educational quiz application that:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Teaches core tennis rules and scoring
+- Adapts difficulty dynamically in real time
+- Provides immediate, kid-friendly explanations
+- Tracks progress and saves the last attempt locally
+- Is modular and scalable for future multi-sport expansion
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project demonstrates strong front-end architecture, TypeScript usage, and adaptive logic implementation.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎯 Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### ✅ 10-Question Adaptive Quiz
+- 3 difficulty levels: `Easy`, `Medium`, `Hard`
+- Dynamic difficulty adjustment:
+  - **2 correct answers in a row → increase difficulty**
+  - **2 incorrect answers in a row → decrease difficulty**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ✅ Immediate Feedback
+- Visual correctness indicators
+- Clear rule explanations after each answer
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### ✅ Progress Tracking
+- Question counter
+- Score tracker
+- Summary screen
+- Last attempt saved in `localStorage`
+
+### ✅ SPA Routing
+- Home page
+- Quiz page
+- Summary page
+- React Router with Vercel rewrite configuration
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|----------|
+| **React** | UI Framework |
+| **TypeScript** | Type safety & maintainability |
+| **Vite** | Fast dev server & build tool |
+| **React Router** | Client-side routing |
+| **Vercel** | Deployment platform |
+
+---
+
+## 🧠 Architecture
+
+src/
+├── data/ # Question bank
+├── logic/ # Adaptive difficulty + quiz engine
+├── pages/ # Home, Quiz, Summary
+├── types/ # TypeScript interfaces
+├── App.tsx # Router configuration
+└── main.tsx # Application entry point
+
+### Design Principles
+
+- Clear separation of UI and business logic
+- Adaptive logic isolated in `/logic`
+- Strong TypeScript typing across modules
+- Easily extendable for additional sports
+
+---
+
+## 🔁 Adaptive Difficulty Algorithm
+
+```text
+Start at EASY.
+
+If 2 correct answers in a row:
+    Increase difficulty one level.
+
+If 2 incorrect answers in a row:
+    Decrease difficulty one level.
