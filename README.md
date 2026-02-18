@@ -64,11 +64,17 @@ This project demonstrates strong front-end architecture, TypeScript usage, and a
 ## 🧠 Architecture
 
 src/
+
 ├── data/ # Question bank
+
 ├── logic/ # Adaptive difficulty + quiz engine
+
 ├── pages/ # Home, Quiz, Summary
+
 ├── types/ # TypeScript interfaces
+
 ├── App.tsx # Router configuration
+
 └── main.tsx # Application entry point
 
 ### Design Principles
