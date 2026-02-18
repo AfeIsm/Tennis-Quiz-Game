@@ -58,7 +58,7 @@ A 10 question interactive tennis rules quiz made to teach people the rules of te
 
 ---
 
-## 🧠 Architecture
+## Architecture
 
 src/
 
@@ -83,7 +83,7 @@ src/
 
 ---
 
-## 🔁 Adaptive Difficulty Algorithm
+## Adaptive Difficulty Algorithm
 
 ```text
 Start at EASY.
