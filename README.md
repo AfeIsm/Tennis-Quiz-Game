@@ -1,4 +1,4 @@
-# 🏃‍♂️🎾 Rule Runner – Adaptive Tennis Rules Quiz
+# 🎾 Rule Quizzer – Adaptive Tennis Rules Quiz
 
 A 10-question interactive tennis rules quiz designed to teach kids the fundamentals of tennis in a fun, adaptive way.
 
@@ -90,3 +90,5 @@ If 2 correct answers in a row:
 
 If 2 incorrect answers in a row:
     Decrease difficulty one level.
+```
+
