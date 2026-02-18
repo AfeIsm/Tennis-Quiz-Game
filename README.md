@@ -5,7 +5,7 @@ A 10-question interactive tennis rules quiz designed to teach kids the fundament
 Built as part of a Software Engineering Internship assessment for a sports education game company.
 
 🔗 **Live Demo:**  
-👉 [View Deployed App](PASTE_YOUR_VERCEL_LINK_HERE)
+👉 [View Deployed App]((http://tennis-quiz-game.vercel.app/))
 
 ---
 
